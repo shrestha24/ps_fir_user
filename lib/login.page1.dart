@@ -33,18 +33,27 @@ class _MyHomePageState extends State<UserRegistration> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: 80.0,
+                height: 20.0,
               ),
               CircleAvatar(
                 backgroundColor: Colors.blue,
-                radius: 50.0,
-              ),
+                  radius: 50.0),
+
+               DecoratedBox(
+                 decoration: BoxDecoration(
+                   image: DecorationImage(
+                     image: AssetImage('https://www.freshersgroup.com/wp-content/uploads/2019/02/Assam-Police.jpg')
+                   )
+                 ),
+
+               ),
+
                Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+                padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
                 child: Divider(),
               ),
              Padding(
-               padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                child: TextField(
                  decoration: InputDecoration(
                    prefixIcon: Icon(Icons.location_city),
@@ -56,35 +65,11 @@ class _MyHomePageState extends State<UserRegistration> {
                    ),
                    border: OutlineInputBorder(),
                  ),
-                 onChanged: (value) {
-                   setState(() {
-                     state = value;
-                   });
-                 },
                ),
              ),
 
-             DropdownButton<String>(
-
-               items: _states.map((String dropDownStringItem) {
-                 return DropdownMenuItem<String>(
-                   value: dropDownStringItem,
-                   child: Text(dropDownStringItem),
-                 );
-               }).toList(),
-
-               onChanged: (String newValueSelected) {
-                 setState(() {
-                   this._currentItemSelected1 = newValueSelected;
-                 });
-               },
-
-               value: _currentItemSelected1,
-
-             ),
-
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.location_city),
@@ -104,27 +89,10 @@ class _MyHomePageState extends State<UserRegistration> {
                 ),
               ),
 
-              DropdownButton<String>(
 
-                items: _cities.map((String dropDownStringItem) {
-                  return DropdownMenuItem<String>(
-                    value: dropDownStringItem,
-                    child: Text(dropDownStringItem),
-                  );
-                }).toList(),
-
-                onChanged: (String newValueSelected) {
-                  setState(() {
-                    this._currentItemSelected2 = newValueSelected;
-                  });
-                },
-
-                value: _currentItemSelected2,
-
-              ),
 
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.business),
@@ -144,7 +112,7 @@ class _MyHomePageState extends State<UserRegistration> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.phone_android),
@@ -164,7 +132,7 @@ class _MyHomePageState extends State<UserRegistration> {
                 ),
                 ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
                 child: MaterialButton(
                   child: Text('Submit',
                   style: TextStyle(
@@ -181,8 +149,13 @@ class _MyHomePageState extends State<UserRegistration> {
               )
             ],
           ),
-
         ),
+        floatingActionButton: FloatingActionButton(
+            elevation: 5.0,
+            child: new Icon(Icons.chevron_right),
+            backgroundColor: Colors.blue,
+            onPressed: () {}
+            )
       ),
     );
 
