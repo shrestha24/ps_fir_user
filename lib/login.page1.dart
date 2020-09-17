@@ -15,9 +15,10 @@ class _MyHomePageState extends State<UserRegistration> {
 
   String state;
   var _states = ['sikkim', 'andra pradesh', 'odissa', 'others'];
-  var _currentItemSelected = 'odissa';
+  var _currentItemSelected1 = 'odissa';
   String city;
-  var _cities = ['Bhubneshswar', 'Berhampur', 'Cuttuck', 'others']
+  var _cities = ['Bhubneshswar', 'Berhampur', 'Cuttuck', 'others'];
+  var _currentItemSelected2 = 'Berhampur';
   String policestation;
   String otp;
 
@@ -74,11 +75,11 @@ class _MyHomePageState extends State<UserRegistration> {
 
                onChanged: (String newValueSelected) {
                  setState(() {
-                   this._currentItemSelected = newValueSelected;
+                   this._currentItemSelected1 = newValueSelected;
                  });
                },
 
-               value: _currentItemSelected,
+               value: _currentItemSelected1,
 
              ),
 
@@ -114,11 +115,11 @@ class _MyHomePageState extends State<UserRegistration> {
 
                 onChanged: (String newValueSelected) {
                   setState(() {
-                    this._currentItemSelected = newValueSelected;
+                    this._currentItemSelected2 = newValueSelected;
                   });
                 },
 
-                value: _currentItemSelected,
+                value: _currentItemSelected2,
 
               ),
 
@@ -180,6 +181,7 @@ class _MyHomePageState extends State<UserRegistration> {
               )
             ],
           ),
+
         ),
       ),
     );

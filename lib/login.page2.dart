@@ -49,7 +49,7 @@ class _CaseDetailsPage extends State<CaseDetails> {
            ),
 
 
-,           Padding(
+           Padding(
              padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
              child: TextField(
                decoration: InputDecoration(
@@ -90,6 +90,24 @@ class _CaseDetailsPage extends State<CaseDetails> {
 
         ),
       ),
+
+      Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        child: MaterialButton(
+          child: Text('Submit',
+            style: TextStyle(
+              color: Colors.white,
+            ),),
+          color: Colors.blue,
+          onPressed: () {
+
+            print(titleCase);
+            print(description);
+            print(suspect);
+
+          },
+        ),
+      )
       ],
     ),
     ),
