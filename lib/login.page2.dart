@@ -112,12 +112,14 @@ class _CaseDetailsPage extends State<CaseDetails> {
          ],
     ),
     ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: Icon(Icons.add),
-            ),
     ),
+
+      floatingActionButton: FloatingActionButton(
+        elevation: 5.0,
+        child: new Icon(Icons.chevron_right),
+        backgroundColor: Colors.blue,
+        onPressed: () {},
+      ),
     );
 
   }

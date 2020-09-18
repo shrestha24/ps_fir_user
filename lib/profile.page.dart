@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/shres/AndroidStudioProjects/sign_in_page/lib/screens/main.dart';
+import 'package:ps_fir_user/login.page1.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -97,10 +98,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: GestureDetector(
                       onTap: ()
                       async {
-                        var result = await FirebaseAuth.instance.signInWithEmailAndPassword(email: emailcontroller.text.trim(), password: passwordcontroller.text.trim());
-                        print(result.user.email);
-                        print("Email Id : ${result.user.email}");
-                        print("UID :${result.user.uid}");
+                      //  var result = await FirebaseAuth.instance.signInWithEmailAndPassword(email: emailcontroller.text.trim(), password: passwordcontroller.text.trim());
+                      //  print(result.user.email);
+                      //  print("Email Id : ${result.user.email}");
+                       // print("UID :${result.user.uid}");
                       },
                       child: Center(
                         child: Text(
@@ -162,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => ()
+                      builder: (BuildContext context) => (UserRegistration())
                   ));
                 },
                 child: Text('Register',

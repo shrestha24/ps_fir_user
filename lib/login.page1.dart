@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ps_fir_user/login.page2.dart';
 import 'package:ps_fir_user/main.dart';
 
 class UserRegistration extends StatefulWidget {
@@ -30,23 +31,19 @@ class _MyHomePageState extends State<UserRegistration> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
+            //child: Image.asset('assets/images/logo.png',
+            //height: 100.0,
+            //width: 100.0,),
+
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
                 height: 20.0,
               ),
-              CircleAvatar(
-                backgroundColor: Colors.blue,
-                  radius: 50.0),
 
-               DecoratedBox(
-                 decoration: BoxDecoration(
-                   image: DecorationImage(
-                     image: AssetImage('https://www.freshersgroup.com/wp-content/uploads/2019/02/Assam-Police.jpg')
-                   )
-                 ),
-
-               ),
+             // CircleAvatar(
+              //  backgroundColor: Colors.blue,
+                //  radius: 50.0),
 
                Padding(
                 padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
@@ -134,7 +131,7 @@ class _MyHomePageState extends State<UserRegistration> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
                 child: MaterialButton(
-                  child: Text('Submit',
+                  child: Text('Get OTP',
                   style: TextStyle(
                     color: Colors.white,
                   ),),
@@ -150,13 +147,17 @@ class _MyHomePageState extends State<UserRegistration> {
             ],
           ),
         ),
+      ),
         floatingActionButton: FloatingActionButton(
             elevation: 5.0,
             child: new Icon(Icons.chevron_right),
             backgroundColor: Colors.blue,
-            onPressed: () {}
-            )
-      ),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => (CaseDetails())
+              ));
+            }
+        )
     );
 
   }
