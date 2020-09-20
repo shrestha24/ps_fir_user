@@ -1,3 +1,4 @@
+import 'package:ps_fir_user/anonymousFIR.dart';
 import 'package:ps_fir_user/login.page1.dart';
 import 'package:flutter/material.dart';
 
@@ -25,10 +26,30 @@ class _CaseDetailsPage extends State<CaseDetails> {
         mainAxisAlignment: MainAxisAlignment.start,
          children: <Widget>[
         SizedBox(
-          height: 80.0,
+          height: 20.0,
         ),
            Padding(
-             padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+             padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+             child: TextField(
+               decoration: InputDecoration(
+                 labelText: 'Case Type',
+                 enabledBorder: OutlineInputBorder(
+                     borderSide: BorderSide(
+                       color: Colors.blue,
+                     )
+                 ),
+                 border: OutlineInputBorder(),
+               ),
+               onChanged: (value) {
+                 setState(() {
+                   titleCase = value;
+                 });
+               },
+
+             ),
+           ),
+           Padding(
+             padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
              child: TextField(
                decoration: InputDecoration(
                  labelText: 'Case Title',
@@ -50,8 +71,10 @@ class _CaseDetailsPage extends State<CaseDetails> {
 
 
            Padding(
-             padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+             padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
              child: TextField(
+               minLines: 2,
+               maxLines: 10,
                decoration: InputDecoration(
                  labelText: 'Case Description',
                  enabledBorder: OutlineInputBorder(
@@ -71,7 +94,7 @@ class _CaseDetailsPage extends State<CaseDetails> {
            ),
 
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
         child: TextField(
           decoration: InputDecoration(
             labelText: 'Suspects(if any)',
@@ -92,7 +115,7 @@ class _CaseDetailsPage extends State<CaseDetails> {
       ),
 
       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
         child: MaterialButton(
           child: Text('Submit',
             style: TextStyle(
@@ -118,7 +141,11 @@ class _CaseDetailsPage extends State<CaseDetails> {
         elevation: 5.0,
         child: new Icon(Icons.chevron_right),
         backgroundColor: Colors.blue,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => (AnonymousRegistration())
+          ));
+        },
       ),
     );
 

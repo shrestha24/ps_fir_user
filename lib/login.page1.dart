@@ -31,7 +31,7 @@ class _MyHomePageState extends State<UserRegistration> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            //child: Image.asset('assets/images/logo.png',
+            //children: Image.asset('assets/images/logo.png',
             //height: 100.0,
             //width: 100.0,),
 
