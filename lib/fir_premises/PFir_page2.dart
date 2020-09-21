@@ -15,6 +15,8 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
   String titleCase;
   String description;
   String suspect;
+  String evidence;
+  String place;
 
   Widget build (BuildContext context) {
     return Scaffold (
@@ -106,7 +108,7 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
                   ),
                   onChanged: (value) {
                     setState(() {
-                      suspect = value;
+                      evidence = value;
                     });
                   },
 
@@ -148,7 +150,7 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
                   ),
                   onChanged: (value) {
                     setState(() {
-                      suspect = value;
+                      place = value;
                     });
                   },
 

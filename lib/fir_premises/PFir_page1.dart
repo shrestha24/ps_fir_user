@@ -14,14 +14,11 @@ class UserRegistration extends StatefulWidget {
 
 class _MyHomePageState extends State<UserRegistration> {
 
-  String state;
-  var _states = ['sikkim', 'andra pradesh', 'odissa', 'others'];
-  var _currentItemSelected1 = 'odissa';
-  String city;
-  var _cities = ['Bhubneshswar', 'Berhampur', 'Cuttuck', 'others'];
-  var _currentItemSelected2 = 'Berhampur';
-  String policestation;
-  String otp;
+String name;
+String gender;
+String age;
+String id;
+String address;
 
 
   @override
@@ -62,6 +59,11 @@ class _MyHomePageState extends State<UserRegistration> {
                       ),
                       border: OutlineInputBorder(),
                     ),
+                    onChanged: (value) {
+                      setState(() {
+                        name = name;
+                      });
+                    },
                   ),
                 ),
 
@@ -80,7 +82,7 @@ class _MyHomePageState extends State<UserRegistration> {
                     ),
                     onChanged: (value) {
                       setState(() {
-                        city = value;
+                        gender = value;
                       });
                     },
                   ),
@@ -103,7 +105,7 @@ class _MyHomePageState extends State<UserRegistration> {
                     ),
                     onChanged: (value) {
                       setState(() {
-                        policestation = value;
+                        age = value;
                       });
                     },
                   ),
@@ -125,7 +127,7 @@ class _MyHomePageState extends State<UserRegistration> {
                     ),
                     onChanged: (value) {
                       setState(() {
-                        policestation = value;
+                        id = value;
                       });
                     },
                   ),
@@ -147,7 +149,7 @@ class _MyHomePageState extends State<UserRegistration> {
                     ),
                     onChanged: (value) {
                       setState(() {
-                        policestation = value;
+                        address = value;
                       });
                     },
                   ),
