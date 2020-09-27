@@ -1,5 +1,6 @@
 import 'package:ps_fir_user/login.page1.dart';
 import 'package:flutter/material.dart';
+import 'package:file_picker/file_picker.dart';
 
 class AnonymousDetails extends StatefulWidget {
   AnonymousDetails({Key key, this.title}) : super(key: key);
@@ -104,13 +105,25 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
                     ),
                     border: OutlineInputBorder(),
                   ),
-                  onChanged: (value) {
-                    setState(() {
-                      suspect = value;
-                    });
-                  },
-
                 ),
+
+              ),
+
+              RaisedButton(
+                onPressed: () async{
+              FilePickerResult result = await FilePicker.platform.pickFiles();
+
+              if(result != null) {
+              PlatformFile file = result.files.first;
+
+              print(file.name);
+              print(file.bytes);
+              print(file.size);
+              print(file.extension);
+              print(file.path);
+              }
+
+              }
               ),
 
               Padding(
@@ -135,6 +148,8 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
           ),
         ),
       ),
+
+
 
       floatingActionButton: FloatingActionButton(
         elevation: 5.0,

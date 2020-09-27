@@ -1,18 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:ps_fir_user/fir_premises/ProfilePage.dart';
 
-class Police_Account_Page1 extends StatefulWidget {
-  Police_Account_Page1 ({Key key, this.title}) : super (key : key);
+class Police_Account_Page2 extends StatefulWidget {
+  Police_Account_Page2 ({Key key, this.title}) : super (key : key);
 
   final String title;
 
-  _Police_Account_Page1 createState() => _Police_Account_Page1();
+  _Police_Account_Page2 createState() => _Police_Account_Page2();
 
 }
 
- class _Police_Account_Page1 extends State<Police_Account_Page1> {
+class _Police_Account_Page2 extends State<Police_Account_Page2> {
 
-  String name;
+  String designation;
+  String state;
+  String district;
+  String police_station;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +34,7 @@ class Police_Account_Page1 extends StatefulWidget {
               ),
 
               CircleAvatar(
-              backgroundColor: Colors.blue,
+                backgroundColor: Colors.blue,
                 radius: 20.0,
               ),
 
@@ -44,10 +48,10 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Name',
+                    labelText: 'Designation',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blue
+                          color: Colors.blue
                       ),
                     ),
                     border: OutlineInputBorder(),
@@ -55,7 +59,7 @@ class Police_Account_Page1 extends StatefulWidget {
 
                   onChanged: (value) {
                     setState(() {
-                      name = value;
+                      designation = value;
                     });
                   },
                 ),
@@ -67,7 +71,7 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Email',
+                    labelText: 'State',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.blue
@@ -78,7 +82,7 @@ class Police_Account_Page1 extends StatefulWidget {
 
                   onChanged: (value) {
                     setState(() {
-                      name = value;
+                      state = value;
                     });
                   },
                 ),
@@ -90,7 +94,7 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Phone No.',
+                    labelText: 'District',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.blue
@@ -101,7 +105,7 @@ class Police_Account_Page1 extends StatefulWidget {
 
                   onChanged: (value) {
                     setState(() {
-                      name = value;
+                      district = value;
                     });
                   },
                 ),
@@ -113,7 +117,7 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Address',
+                    labelText: 'Police Station',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.blue
@@ -124,7 +128,7 @@ class Police_Account_Page1 extends StatefulWidget {
 
                   onChanged: (value) {
                     setState(() {
-                      name = value;
+                      police_station = value;
                     });
                   },
                 ),
@@ -134,18 +138,18 @@ class Police_Account_Page1 extends StatefulWidget {
         ),
       ),
 
-       floatingActionButton: FloatingActionButton(
-         elevation: 5.0,
-         child: new Icon(Icons.chevron_right),
-         backgroundColor: Colors.blue,
-         onPressed: () {
-           Navigator.of(context).push(MaterialPageRoute(
-             builder: (BuildContext context) => ()
-           ));
-         },
-       ),
+      floatingActionButton: FloatingActionButton(
+        elevation: 5.0,
+        child: new Icon(Icons.chevron_right),
+        backgroundColor: Colors.blue,
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => ()
+          ));
+        },
+      ),
 
     );
   }
 
- }
+}

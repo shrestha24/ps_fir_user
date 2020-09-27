@@ -1,5 +1,6 @@
 import 'package:ps_fir_user/login.page1.dart';
 import 'package:flutter/material.dart';
+import 'package:file_picker/file_picker.dart';
 
 class AnonymousDetails extends StatefulWidget {
   AnonymousDetails({Key key, this.title}) : super(key: key);
@@ -115,6 +116,22 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
                 ),
               ),
 
+              RaisedButton(
+                onPressed: () async{
+                  FilePickerResult result = await FilePicker.platform.pickFiles();
+
+                  if(result != null) {
+                    PlatformFile file = result.files.first;
+
+                    print(file.name);
+                    print(file.bytes);
+                    print(file.size);
+                    print(file.extension);
+                    print(file.path);
+                  }
+                },
+              ),
+
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: TextField(
@@ -131,7 +148,7 @@ class _AnonymousCaseDetailsPage extends State<AnonymousDetails> {
                     setState(() {
                       suspect = value;
                     });
-                  },
+                  },  
 
                 ),
               ),
