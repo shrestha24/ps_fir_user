@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class Police_Account_Page1 extends StatefulWidget {
   Police_Account_Page1 ({Key key, this.title}) : super (key : key);
@@ -10,7 +10,7 @@ class Police_Account_Page1 extends StatefulWidget {
 
 }
 
- class _Police_Account_Page1 extends State<Police_Account_Page1> {
+class _Police_Account_Page1 extends State<Police_Account_Page1> {
 
   String name;
 
@@ -30,7 +30,7 @@ class Police_Account_Page1 extends StatefulWidget {
               ),
 
               CircleAvatar(
-              backgroundColor: Colors.blue,
+                backgroundColor: Colors.blue,
                 radius: 20.0,
               ),
 
@@ -44,30 +44,7 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Name',
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue
-                      ),
-                    ),
-                    border: OutlineInputBorder(),
-                  ),
-
-                  onChanged: (value) {
-                    setState(() {
-                      name = value;
-                    });
-                  },
-                ),
-
-              ),
-
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Email',
+                    labelText: 'Designation',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.blue
@@ -90,7 +67,7 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Phone No.',
+                    labelText: 'State',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.blue
@@ -113,7 +90,30 @@ class Police_Account_Page1 extends StatefulWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'Address',
+                    labelText: 'District',
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Colors.blue
+                      ),
+                    ),
+                    border: OutlineInputBorder(),
+                  ),
+
+                  onChanged: (value) {
+                    setState(() {
+                      name = value;
+                    });
+                  },
+                ),
+
+              ),
+
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.account_circle),
+                    labelText: 'Police Station',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.blue
@@ -134,18 +134,18 @@ class Police_Account_Page1 extends StatefulWidget {
         ),
       ),
 
-       floatingActionButton: FloatingActionButton(
-         elevation: 5.0,
-         child: new Icon(Icons.chevron_right),
-         backgroundColor: Colors.blue,
-         onPressed: () {
-           Navigator.of(context).push(MaterialPageRoute(
-             builder: (BuildContext context) => ()
-           ));
-         },
-       ),
+      floatingActionButton: FloatingActionButton(
+        elevation: 5.0,
+        child: new Icon(Icons.chevron_right),
+        backgroundColor: Colors.blue,
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => ()
+          ));
+        },
+      ),
 
     );
   }
 
- }
+}

@@ -61,7 +61,7 @@ String address;
                     ),
                     onChanged: (value) {
                       setState(() {
-                        name = name;
+                        name = value;
                       });
                     },
                   ),
